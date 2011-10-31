@@ -1,28 +1,18 @@
-<cfscript>
+<cfcomponent extends="mxunit.framework.TestCase">
+	 {
 
-component extends="mxunit.framework.TestCase" {
+	<cfset a = [1,2,3,4] />
 
-a = [1,2,3,4];
+	<cffunction name="setUp">
+		
+	</cffunction>
 
+	<cffunction name="testThis" dataProvider="a">
+		<cfargument name="a" />
+		<cfset debug(a) />
+	</cffunction>
 
+</cfcomponent>
 
-function setUp(){
-	
-}
-
-
-
-
-/**
-  * @dataprovider a
-  */
- function testThis(a){
-  debug(a);
-}
-
-
-}
-
-</cfscript>
 
 
